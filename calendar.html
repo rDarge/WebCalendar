@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Web Calendar</title>
+
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script src="calendar.js"></script>
+</head>
+
+<body>
+<div id="top">
+	<div id="logo">LOGO GOES HERE</div>
+</div>
+
+<div id="nav">
+	<div id="navList">
+		<a class="headerLink" href="#" onClick="return false;">Home</a>
+		<a class="headerLink" href="#" onClick="return false;">Email</a>
+		<a class="headerLinkSelected" href="#" onClick="return false;">Calendar</a>
+		<a class="headerLink" href="#" onClick="return false;">Contacts</a>
+		<a class="headerLink" href="#" onClick="return false;">Documents</a>
+		<a class="headerLink" href="#" onClick="return false;">Settings</a>
+	</div>
+</div>
+
+<div id="calendarFrame">
+	<div id="eventEditor">
+		<div id="eventEditor_title">Event Manager</div>
+	    Title:<input type="text" name="description" id="description"/><br />
+	    Start:<input type="datetime-local" name="startTime" id="startTime"><br />
+	    End:<input type="datetime-local" name="endTime" onfocus="eventEditorUpdate()" id="endTime"><br />
+	    <input type="submit" value="Submit" onclick="eventEditorApply()" id="submitEvent">
+	    <input type="submit" value="Clear" onclick="eventEditorClear()" id="clearEvent">
+	    <input type="submit" value="Delete" onclick="eventEditorDelete()" id="deleteEvent"><br />
+	</div>
+	<div id="calendar">
+	</div>
+	<div id="calendarUpcoming">
+	</div>
+</div>
+
+<div id="bottom">
+
+</div>
+
+</body>
